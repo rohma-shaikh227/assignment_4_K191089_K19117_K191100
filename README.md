@@ -1,16 +1,11 @@
-# assignment_4
+Assignment 04
 
-A new Flutter project.
+Group Partners: K191089, K191117, K191100
 
-## Getting Started
+Title:  Demo of Shared Prefrences Applied on Favourites 
 
-This project is a starting point for a Flutter application.
+Images:
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![1](https://user-images.githubusercontent.com/61913343/232345590-417c7994-ee7f-44a1-ab16-ed52862c34fd.jpg)
+![2](https://user-images.githubusercontent.com/61913343/232345591-912c1ebc-2f6e-4ee6-89c7-697df765b67d.jpg)
