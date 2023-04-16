@@ -1,0 +1,91 @@
+import 'package:english_words/english_words.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return  MaterialApp(
+        title: 'Namer App',
+        theme: ThemeData(
+          primarySwatch: Colors.deepOrange,
+        ),
+        home: MyHomePage(),
+          );
+  }
+}
+
+
+class MyHomePage extends StatefulWidget {
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+
+    var page;
+    var selectedIndex;
+    return Scaffold(
+      appBar: AppBar(
+        leading: Icon(Icons.favorite_outline_rounded),
+        title: Text ("Shared Pref Demo"),
+      ),
+      body: Row(
+
+        children:[
+      SafeArea(
+      child: NavigationRail(
+        // extended: constraints.maxWidth >= 600,  // ← Here.
+        destinations: const [
+          NavigationRailDestination(
+            icon: Icon(Icons.home),
+            label: Text('Home'),
+          ),
+          NavigationRailDestination(
+            icon: Icon(Icons.favorite),
+            label: Text('Favorites'),
+          ),
+        ],
+        selectedIndex: selectedIndex,
+        // onDestinationSelected: (value) {
+        //   setState(() {
+        //     selectedIndex = value;
+        //   });
+        // },
+      ),
+    ),
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+
+              children: [
+
+                Text("data"),
+                SizedBox(height: 10,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton.icon(onPressed: (){}, icon: Icon (Icons.favorite),label: Text("Like") ,),
+                    SizedBox(width: 10,),
+                    ElevatedButton(onPressed: (){}, child: Text ("Next")),
+                  ],
+                ),
+              ],
+
+            ),
+          ),
+
+        ],
+      ),
+    );
+
+  }
+}
